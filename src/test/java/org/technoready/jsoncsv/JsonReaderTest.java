@@ -9,16 +9,24 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- * @author Jorge Armando Avila Carrillo
+ *
+ * Class test for JsonReader.
+ * Validates a valid JSON file, if the file exits and Invalid format.
  * DATE: 21 - September - 2025
  *
- * Class test for JsonReader
+ * @author Jorge Armando Avila Carrillo | NAOID: 3310
+ *
+ *
  *
  * @version 1.0
  * */
 
 public class JsonReaderTest {
     private JsonReader jsonReader;
+
+    /**
+     * Initialize an jsonReader instance
+     * */
 
     @BeforeEach
     public void setup() {
@@ -36,7 +44,7 @@ public class JsonReaderTest {
             assertNotNull(result, "The JSONArray can't be null");
             assertFalse(result.isEmpty(), "The JSONArray can't be empty");
         }catch(IOException | JSONException e){
-            fail("This exeption must not be thrown");
+            fail("This exception must not be thrown");
         }
     }
 
@@ -52,7 +60,7 @@ public class JsonReaderTest {
     }
 
     /**
-    * Tests the exception for a invalid JSON file
+    * Tests the exception for an invalid JSON file
     * */
     @Test
     public void testReadJsonFileInvalidFormat(){

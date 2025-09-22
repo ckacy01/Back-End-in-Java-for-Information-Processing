@@ -8,6 +8,7 @@ import java.util.Arrays;
 /**
  * A class responsible for writing data to CSV files.
  * Utilizes the OpenCSV library to generate CSV files with configurable delimiters.
+ * DATE: 21 - September - 2025
  *
  * @author Jorge Armando Avila Carrillo | NAOID: 3310
  * @version 1.0
@@ -17,12 +18,12 @@ import java.util.Arrays;
 
 public class CsvWriter {
     /**
-     * Writes a two-dimensional arrat of data to a CSV file at the specified path.
-     * Use a default comma delimiter and overwirtes the file if it already exists.
+     * Writes a two-dimensional array of data to a CSV file at the specified path.
+     * Use a default comma delimiter and overwrites the file if it already exists.
      *
-     * @param filePath-String The path  to the CSV file to be created or overwritten
-     * @param data-Array a Two dimensional array of strings containing the rows and columns to write
-     * @throws IOException If an error occurs while writing the file
+     * @param filePath [String] The path  to the CSV file to be created or overwritten.
+     * @param data [String Array] a 2D array of strings containing the rows and columns to write.
+     * @throws IOException If an error occurs while writing the file.
      *
      *
      * */
