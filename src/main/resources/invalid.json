@@ -1,0 +1,11 @@
+{
+  "name": "Jorge",
+  "age": 30,  // comentario no permitido en JSON
+  "skills": ["Java", "SQL",],  // coma extra
+  "active": true
+  "address": { "city": "Culiacán", "zip": 80000 }  // falta coma antes de "address"
+  "projects": [
+    {"name": "Technoready"},
+    {"name": "JSON and CSV project"  // falta cierre de objeto y corchete
+      ]
+    }
