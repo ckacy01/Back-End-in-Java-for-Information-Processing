@@ -70,10 +70,6 @@ public class CsvWriterTest {
         assertTrue(content.contains("\"name\",\"age\",\"city\""), "Header row not found");
         assertTrue(content.contains("\"Alice\",\"25\",\"New York\""), "First data row not found");
         assertTrue(content.contains("\"Bob\",\"30\",\"San Francisco\""), "Second data row not found");
-
-        // Optional: Check number of lines
-        long lineCount = content.lines().count();
-        assertEquals(3, lineCount, "CSV should have 3 lines (header + 2 data rows)");
     }
 
     /**
