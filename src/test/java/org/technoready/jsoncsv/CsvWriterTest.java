@@ -13,6 +13,7 @@ import static org.junit.jupiter.api.Assertions.*;
  * A test class for the CsvWriter class.
  * Validates the functionality of writing CSV files,
  * including error handling and correct file creation.
+ * DATE: 21 - September - 2025
  *
  * @author Jorge Armando Avila Carrillo | NAOID: 3310
  * @version 1.0
@@ -22,7 +23,7 @@ public class CsvWriterTest {
     private String tempFilePath;
 
     /**
-     * Initializes a CsvWriter instance and generates a unique temporary file path
+     * Initializes a CsvWriter instance and generates a unique temporary file path,
      * for testing before each test case.
      */
     @BeforeEach

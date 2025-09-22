@@ -1,14 +1,13 @@
 package org.technoready.jsoncsv;
 
-
-import com.opencsv.CSVWriter;
 import org.json.JSONArray;
 import org.json.JSONException;
 import java.io.IOException;
 
 /**
  * Main class that integrates all the functions of JSON reader and CSV writer
- * Currently reads a JSON file and converts it to CSV
+ * Currently reads a JSON file and converts it to CSV.
+ * DATE: 21 - September - 2025
  *
  * @author Jorge Armando Avila Carrillo - NAOID: 3310
  *
@@ -23,8 +22,8 @@ public class Main {
     /**
      * Constructs a Main instance with the specified JsonReader and CsvWriter.
      *
-     * @param jsonReader The JsonReader instance to read JSON files.
-     * @param csvWriter The CsvWriter instance to write CSV files.
+     * @param jsonReader [JsonReader] The JsonReader instance to read JSON files.
+     * @param csvWriter [CsvWriter] The CsvWriter instance to write CSV files.
      */
     public Main(JsonReader jsonReader, CsvWriter csvWriter) {
         this.jsonReader = jsonReader;
@@ -61,7 +60,7 @@ public class Main {
     /**
      * Reads a JSON file from the specified path and returns its content as a JSONArray.
      *
-     * @param filePath The path to the JSON file to read.
+     * @param filePath [String] The path to the JSON file to read.
      * @return A JSONArray containing the parsed JSON data.
      * @throws IOException If the file cannot be read.
      * @throws JSONException If the JSON format is invalid.
@@ -94,8 +93,8 @@ public class Main {
     /**
      * Writes the provided data to a CSV file at the specified path.
      *
-     * @param filePath The path to the CSV file to write.
-     * @param data The 2D array of data to write to the CSV file.
+     * @param filePath [String] The path to the CSV file to write.
+     * @param data [String Array] The 2D array of data to write to the CSV file.
      * @throws IOException If the file cannot be written.
      */
     private void writeCsv(String filePath, String[][] data) throws IOException {
