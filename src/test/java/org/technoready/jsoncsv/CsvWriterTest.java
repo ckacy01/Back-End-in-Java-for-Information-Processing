@@ -28,7 +28,7 @@ public class CsvWriterTest {
      */
     @BeforeEach
     public void setUp() {
-        csvWriter = new CsvWriter();
+        csvWriter = new CsvWriter(',');
         tempFilePath = "src/main/resources/test.csv";
     }
 
