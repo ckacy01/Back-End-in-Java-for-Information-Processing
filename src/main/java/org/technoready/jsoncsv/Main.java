@@ -23,7 +23,7 @@ public class Main {
     public static void main(String[] args) {
         // Initialize dependencies
         JsonReader reader = new JsonReader();
-        CsvWriter writer = new CsvWriter();
+        CsvWriter writer = new CsvWriter(',');
         JsonCsvConverter converter = new JsonCsvConverter();
 
         // Load configuration
