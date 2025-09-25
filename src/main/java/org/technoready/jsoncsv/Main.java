@@ -10,7 +10,7 @@ import java.io.IOException;
  *
  * @author Jorge Armando Avila Carrillo - NAOID: 3310
  *
- * @version 3.0
+ * @version 3.1
  *
  * */
 
@@ -23,16 +23,16 @@ public class Main {
     public static void main(String[] args) {
         // Initialize dependencies
         JsonReader reader = new JsonReader();
-        CsvWriter writer = new CsvWriter(',');
         JsonCsvConverter converter = new JsonCsvConverter();
+        ConfigManager configManager = new ConfigManager();
 
         // Load configuration
-        // TODO: Add the lines to obtain the config properties
-        String input = "src/main/resources/input.json";
-        String output = "src/main/resources/output.csv";
+        String input = configManager.getInputPath(args);
+        String output = configManager.getOutputPath(args);
 
         // Set delimiter
-        // TODO: Add the line to set the demilimiter using CsvWriter
+        char separator = configManager.getDelimiter(args);
+        CsvWriter writer = new CsvWriter(separator);
 
         try {
             JSONArray json = reader.readJsonFile(input);
