@@ -13,7 +13,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 /**
  * Class to test JSON to CSV convert.
- * DATE: 22 - September - 2025
+ * DATE: 24 - September - 2025
  *
  *
  * @author Jorge Armando Avila Carrillo
@@ -22,12 +22,30 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class JsonCsvConverterTest {
+    private final JsonCsvConverter converter = new JsonCsvConverter();
 
-    private Main main;
-
-
+    /**
+     * This test Validate if the json file is a valid JSON
+     *
+     */
     @Test
-    public void testReadJson() throws IOException {
+    public void testConvertValidJson() throws JSONException {
+        JSONArray json = new JSONArray("[{\"name\":\"Alice\",\"age\":25},{\"name\":\"Bob\"}]");
+        String[][] csv = converter.convert(json);
+        assertEquals(2, csv[0].length); // Headers: name, age
+        assertEquals("Alice", csv[1][0]);
+        assertEquals("25", csv[1][1]);
+        assertEquals("", csv[2][1]); // Missing age for Bob
+    }
+
+    /**
+     * This test Validate if the Json you want to convert its empty
+     */
+    @Test
+    public void testConvertEmptyJson() throws JSONException {
+        JSONArray json = new JSONArray();
+        String[][] csv = converter.convert(json);
+        assertEquals(0, csv.length);
     }
 
 }
